@@ -8,18 +8,19 @@ public class UnrealMinecraftTarget : TargetRules
 	public UnrealMinecraftTarget(TargetInfo Target)
 	{
 		Type = TargetType.Game;
-	}
+        ExtraModuleNames.Add("UnrealMinecraft");
+    }
 
 	//
 	// TargetRules interface.
 	//
 
-	public override void SetupBinaries(
-		TargetInfo Target,
-		ref List<UEBuildBinaryConfiguration> OutBuildBinaryConfigurations,
-		ref List<string> OutExtraModuleNames
-		)
-	{
-		OutExtraModuleNames.Add("UnrealMinecraft");
-	}
+	//public override void SetupBinaries(
+	//	TargetInfo Target,
+	//	ref List<UEBuildBinaryConfiguration> OutBuildBinaryConfigurations,
+	//	ref List<string> OutExtraModuleNames
+	//	)
+	//{
+	//	OutExtraModuleNames.Add("UnrealMinecraft");
+	//}
 }
